@@ -3,5 +3,5 @@
 }
 
 .menu-text-hover {
-    @apply transition-transform transform scale-100 hover:scale-110 hover:text-slate-200 cursor-pointer;
+    @apply transition-transform transform scale-100 hover:scale-110 hover:text-slate-200 hover:animate-none cursor-pointer;
 }

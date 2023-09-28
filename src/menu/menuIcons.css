@@ -1,8 +1,8 @@
 .menu-icon {
     @apply relative flex items-center justify-center
     h-12 w-12 mt-2 mb-2 mx-auto text-3xl shadow-lg
-    bg-amber-400 text-orange-950 rounded-3xl
-    hover:scale-125 hover:text-orange-800 hover:rounded-2xl hover:text-4xl
+    bg-primary text-secondary rounded-3xl
+    hover:scale-125 hover:text-accent-1 hover:rounded-2xl hover:text-4xl
     transition-all ease-linear cursor-pointer;
 }
 

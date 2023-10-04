@@ -19,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <MenuIcons children={children} />
+        <MenuIcons>
+          {children}
+        </MenuIcons>
       </body>
     </html>
   );

@@ -41,7 +41,7 @@ const MenuIcons = ({children} : {children : React.ReactNode}) => {
       ? "dark"
       : "light";
     setTheme(systemTheme);
-  }, []);
+  });
 
   // set the initial theme icon based on the current theme
   let themeIcon =

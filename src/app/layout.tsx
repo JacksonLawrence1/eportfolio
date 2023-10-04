@@ -1,23 +1,26 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import Fonts from './fonts'
+import "./globals.css";
+import type { Metadata } from "next";
+import { Inter, Roboto } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'] })
+import MenuIcons from "@/icons/menuIcons";
+
+const roboto = Roboto({ weight: "400", subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'eportfolio'
-}
+  title: "eportfolio",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <Fonts />
-      <body className={inter.className}>{children}</body>
+      <body className={roboto.className}>
+        <MenuIcons children={children} />
+      </body>
     </html>
-  )
+  );
 }

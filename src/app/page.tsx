@@ -1,10 +1,16 @@
-import Menu from "@/menu/menu";
+'use client'
+
+import { useRouter } from "next/navigation";
+import { useEffect } from 'react';
 
 export default function Home() {
-  // bg-gradient-to-b from-blue-800 to-cyan-800
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push("/landing");
+  }, []);
+
   return (
-    <main>
-      <Menu />
-    </main>
+    <div className="flex h-screen w-screen"></div>
   );
 }

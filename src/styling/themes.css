@@ -1,24 +1,38 @@
 [data-theme="dark"] {
-    --color-bkg1: 148 65 10;
-    --color-bkg2: 185 86 4;
+  --color-bkg1: 154 52 18;
+  --color-bkg2: 194 65 12;
 
-    --color-primary: 71 26 1;
-    --color-seconday: 252 165 4;
+  --color-primary: 71 26 1;
+  --color-seconday: 252 165 4;
 
-    --color-text: 0 0 0;
+  color: #fdba74;
 
-    --color-accent-1: 255 198 30;
-    --color-accent-2: 255 198 30;
-  }
-  [data-theme="light"] {
-    --color-bkg1: 247 180 122;
-    --color-bkg2: 253 235 215;
+  --color-accent-1: 255 237 213;
+  --color-accent-2: 255 198 30;
+}
+[data-theme="light"] {
+  --color-bkg1: 247 180 122;
+  --color-bkg2: 253 235 215;
 
-    --color-primary: 242 129 53;
-    --color-seconday: 64 18 10;
+  --color-primary: 242 129 53;
+  --color-seconday: 64 18 10;
 
-    --color-text: 185 86 4;
+  color: #40120a;
 
-    --color-accent-1: 186 60 20;
-    --color-accent-2: 148 49 24;
-  }
+  --color-accent-1: 186 60 20;
+  --color-accent-2: 148 49 24;
+}
+
+.orange {
+  --orange-50: 255 247 237;
+  --orange-100: 255 237 213;
+  --orange-200: 254 215 170;
+  --orange-300: 253 186 116;
+  --orange-400: 251 146 60;
+  --orange-500: 249 115 22;
+  --orange-600: 234 88 12;
+  --orange-700: 194 65 12;
+  --orange-800: 154 52 18;
+  --orange-900: 124 45 18;
+  --orange-950: 67 20 7;
+}

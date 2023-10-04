@@ -1,1 +1,1 @@
-WIP
+My personal website to showcase in progress/completed projects.

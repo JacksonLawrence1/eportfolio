@@ -8,7 +8,7 @@ export default function Home() {
 
   useEffect(() => {
     router.replace("/landing");
-  }, []);
+  }, [router]);
 
   return (
     <div className="flex h-screen w-screen"></div>

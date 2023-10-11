@@ -9,7 +9,7 @@ const Home = () => (
       </div>
       <div className="flex flex-col gap-4">
         <h1 className="text-6xl">Hi,</h1>
-        <h1 className="text-6xl text-secondary">I'm Jackson!</h1>
+        <h1 className="text-6xl text-secondary">{"I'm Jackson"}</h1>
         <h1 className="text-4xl">Software Engineer & Game Dev</h1>
       </div>
     </div>

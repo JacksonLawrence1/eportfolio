@@ -1,7 +1,6 @@
 'use client';
 
 import "@/styling/themes.css";
-import "./menuIcons.css";
 
 import { useEffect, useState } from 'react';
 import Link from "next/link";
@@ -10,9 +9,10 @@ import Link from "next/link";
 import { BsFillVolumeUpFill, BsFillVolumeMuteFill } from "react-icons/bs";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { BsGithub } from "react-icons/bs";
+import { AiFillHome } from "react-icons/ai";
+import { BiSolidRocket } from "react-icons/bi";
 
 import "@/styling/themes.css";
-import "./menuIcons.css";
 
 // declare the type of the props for the MenuIcon component
 type MenuIconProps = {
@@ -21,9 +21,9 @@ type MenuIconProps = {
 };
 
 const MenuIcon = ({ icon, tooltip }: MenuIconProps) => (
-  <div className="menu-icon group">
+  <div className="icon group">
     {icon}
-    <span className="menu-tooltip group-hover:scale-100">{tooltip}</span>
+    <span className="icon-tooltip group-hover:scale-100">{tooltip}</span>
   </div>
 );
 
@@ -41,7 +41,7 @@ const MenuIcons = ({children} : {children : React.ReactNode}) => {
       ? "dark"
       : "light";
     setTheme(systemTheme);
-  });
+  }, []);
 
   // set the initial theme icon based on the current theme
   let themeIcon =
@@ -55,12 +55,11 @@ const MenuIcons = ({children} : {children : React.ReactNode}) => {
     <div className="bg-gradient-to-b from-bkg1 to-bkg2" data-theme={currentTheme}>
       {/* social media icons here */}
       <div className="flex absolute left-0 p-4 gap-4">
-        <Link
-          href="https://github.com/JacksonLawrence1"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <MenuIcon icon={<BsGithub />} tooltip="GitHub" />
+        <Link href="/home">
+          <MenuIcon icon={<AiFillHome />} tooltip="Home" />
+        </Link>
+        <Link href="/landing">
+          <MenuIcon icon={<BiSolidRocket />} tooltip="Landing" />
         </Link>
       </div>
       {/* website cosmetics here, such as theming */}

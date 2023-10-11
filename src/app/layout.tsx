@@ -18,6 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <title>Jackson Lawrence</title>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body className={roboto.className}>
         <MenuIcons>
           {children}

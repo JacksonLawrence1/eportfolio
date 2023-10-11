@@ -8,19 +8,19 @@
   color: #fdba74;
 
   --color-accent-1: 255 237 213;
-  --color-accent-2: 255 198 30;
+  --color-accent-2: 67 20 7;
 }
 [data-theme="light"] {
   --color-bkg1: 247 180 122;
   --color-bkg2: 253 235 215;
 
   --color-primary: 242 129 53;
-  --color-seconday: 64 18 10;
+  --color-seconday: 249 115 22;
 
   color: #40120a;
 
   --color-accent-1: 186 60 20;
-  --color-accent-2: 148 49 24;
+  --color-accent-2: 251 146 60;
 }
 
 .orange {

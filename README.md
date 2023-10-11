@@ -1,1 +1,1 @@
-My personal website to showcase in progress/completed projects.
+My personal website to showcase projects.

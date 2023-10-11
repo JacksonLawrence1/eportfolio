@@ -2,3 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .icon {
+        @apply relative flex items-center justify-center
+        h-12 w-12 mt-2 mb-2 mx-auto text-3xl shadow-lg
+        bg-primary rounded-3xl
+        hover:scale-125 hover:text-accent-1 hover:rounded-2xl hover:text-4xl hover:bg-accent-2
+        transition-all ease-linear cursor-pointer;
+    }
+    
+    .icon-tooltip {
+        @apply absolute w-auto p-2 m-2 min-w-max top-12
+        rounded-md shadow-lg
+        text-white bg-gray-900 bg-opacity-90
+        text-xs font-semibold
+        transition-all origin-top scale-0 ease-in-out
+        pointer-events-none;
+    }
+    
+    .icon-tooltip:before {
+        @apply absolute w-2 h-1 bottom-full left-1/2 -translate-x-1/2 
+        shadow-lg
+        bg-gray-900 bg-opacity-90;
+        content: '';
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+
+    .button {
+        @apply relative flex items-center justify-center
+        shadow-lg bg-primary px-4 py-2 rounded-lg 
+        text-2xl
+        hover:scale-125 hover:text-accent-1 hover:bg-accent-2 hover:rounded-md
+        transition-all ease-linear;
+    }
+}

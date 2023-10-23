@@ -19,6 +19,14 @@
         transition-all origin-top scale-0 ease-in-out
         pointer-events-none;
     }
+
+    .image-icon {
+        @apply h-20 w-20 shadow-lg rounded-full object-cover;
+    }
+
+    .card {
+        @apply bg-primary mx-4 justify-center rounded-lg shadow-lg px-4 py-4;
+    }
     
     .icon-tooltip:before {
         @apply absolute w-2 h-1 bottom-full left-1/2 -translate-x-1/2 
@@ -31,7 +39,7 @@
     .button {
         @apply relative flex items-center justify-center
         shadow-lg bg-primary px-4 py-2 rounded-lg 
-        text-2xl
+        text-2xl whitespace-nowrap
         hover:scale-125 hover:text-accent-1 hover:bg-accent-2 hover:rounded-md
         transition-all ease-linear;
     }

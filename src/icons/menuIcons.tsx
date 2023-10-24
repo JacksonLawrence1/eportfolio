@@ -8,7 +8,6 @@ import Link from "next/link";
 // icons
 import { BsFillVolumeUpFill, BsFillVolumeMuteFill } from "react-icons/bs";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
-import { BsGithub } from "react-icons/bs";
 import { AiFillHome } from "react-icons/ai";
 import { BiSolidRocket } from "react-icons/bi";
 
@@ -29,10 +28,13 @@ const MenuIcon = ({ icon, tooltip }: MenuIconProps) => (
 
 const MenuIcons = ({children} : {children : React.ReactNode}) => {
   const [currentTheme, setTheme] = useState("light");
+  const [sound, setSound] = useState(true); // TODO: implement sound
 
   // change the theme based on the current theme (avoiding toggle so can have more than 2 themes)
   const changeTheme = () =>
     setTheme(currentTheme === "light" ? "dark" : "light");
+
+  const changeSound = () => setSound(!sound);
 
   useEffect(() => {
     // set the theme based on the system theme
@@ -51,6 +53,12 @@ const MenuIcons = ({children} : {children : React.ReactNode}) => {
       <MdDarkMode onClick={changeTheme} />
     );
 
+  let soundIcon = sound ? (
+    <BsFillVolumeUpFill onClick={changeSound} />
+  ) : (
+    <BsFillVolumeMuteFill onClick={changeSound} />
+  );
+
   return (
     <div className="bg-gradient-to-b from-bkg1 to-bkg2" data-theme={currentTheme}>
       {/* social media icons here */}
@@ -64,7 +72,7 @@ const MenuIcons = ({children} : {children : React.ReactNode}) => {
       </div>
       {/* website cosmetics here, such as theming */}
       <div className="flex absolute right-0 p-4 gap-4">
-        <MenuIcon icon={<BsFillVolumeUpFill />} tooltip="Sound" />
+        <MenuIcon icon={soundIcon} tooltip="Sound" />
         <MenuIcon icon={themeIcon} tooltip="Theme" />
       </div>
       {children}

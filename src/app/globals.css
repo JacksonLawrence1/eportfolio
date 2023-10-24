@@ -20,6 +20,15 @@
         pointer-events-none;
     }
 
+    .hyperlink {
+        @apply hover:text-accent-1
+        transition-all ease-linear;
+    }
+
+    .hero {
+        @apply flex flex-col items-center mx-auto h-screen gap-8 justify-center;
+    }
+
     .image-icon {
         @apply h-20 w-20 shadow-lg rounded-full object-cover;
     }

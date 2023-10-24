@@ -1,53 +1,53 @@
-import Ranking from "./ranking";
 import Back from "@/components/back";
+import Link from "next/link";
+
+import { BsGithub } from "react-icons/bs";
+
+const SocialIcon = ({
+  icon,
+  link,
+}: {
+  icon: React.ReactNode;
+  link: string;
+}) => (
+  <Link href={link} target="_blank" rel="noopener noreferrer">
+    <div className="icon group">{icon}</div>
+  </Link>
+);
 
 const About = () => (
-  <div className="flex flex-col items-center h-screen gap-8 justify-center">
-    <div className="card max-w-3xl">
-      <p className="text-lg">
-        Hello, I'm Jackson 👋 I've recently graduated from the University of
-        Bristol, where I achieved a first class Master's in Computer Science.
-        Currently, I'm particularly interested in
-        <span className="font-bold"> front-end work</span> and
-        <span className="font-bold"> game development</span> having worked on
-        projects in this area in my own time and during my degree (See Projects
-        Page), but I am open-minded to work on other similar disciplines. I'm
-        incredibly motivated by work which I'm interested in, and would love to
-        work on projects which I can be passionate about. When I'm not working
-        on my own projects, I love playing video games, watching movies, and
-        working out. Some of my favourites can be seen below.
-      </p>
-    </div>
-    <div className="flex justify-center gap-8">
-      <div className="card flex flex-col gap-2">
-        <p className="text-center text-lg">Favourite Games</p>
-        <Ranking
-          name="The Elder Scrolls V: Skyrim"
-          link="https://image.api.playstation.com/vulcan/ap/rnd/202009/2820/h12URI7MdswtFPFHpkppNh2z.png"
-        />
-        <Ranking
-          name="Baldur's Gate 3"
-          link="https://assets-prd.ignimgs.com/2023/08/24/baldursg3-1692894717196.jpeg"
-        />
-        <Ranking
-          name="Factorio"
-          link="https://upload.wikimedia.org/wikipedia/en/0/08/Factorio_cover.png"
-        />
+  <div className="hero">
+    <div className="flex flex-col max-w-3xl gap-4">
+      <div className="flex items-center justify-between">
+        <h1 className="pl-4 text-4xl text-secondary">Jackson Lawrence, MEng</h1>
+        <div className="flex mr-4">
+          <SocialIcon
+            icon={<BsGithub />}
+            link="https://github.com/JacksonLawrence1"
+          />
+        </div>
       </div>
-      <div className="card flex flex-col gap-2">
-        <p className="text-center text-lg">Favourite Movies</p>
-        <Ranking
-          name="The Prestige"
-          link="https://assets.scriptslug.com/live/img/posters/the-prestige-2006.jpg"
-        />
-        <Ranking
-          name="The Dark Knight"
-          link="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg"
-        />
-        <Ranking
-          name="The Social Network"
-          link="https://upload.wikimedia.org/wikipedia/en/8/8c/The_Social_Network_film_poster.png"
-        />
+      <div className="card">
+        <p className="text-lg">
+          Hello, I'm Jackson 👋 I've recently graduated from the University of
+          Bristol, where I achieved a first class Master's in Computer Science.
+          Currently, I'm particularly interested in
+          <span className="font-semibold"> front-end work</span> and
+          <span className="font-semibold"> games development</span>,
+          having distinct experience from working on{" "}
+          <Link className="hyperlink underline" href="/projects">
+            projects
+          </Link>{" "}
+          in these area during my degree and in my own time. I'm incredibly
+          motivated by work which I'm interested in, and would love to work on
+          projects which I can be passionate about. When I'm not working on my
+          own projects, I love playing video games, reviewing film and TV, and
+          working out. Some of my favourites can be found{" "}
+          <Link className="hyperlink underline" href="./about/favourites">
+            here
+          </Link>
+          .
+        </p>
       </div>
     </div>
     <Back />

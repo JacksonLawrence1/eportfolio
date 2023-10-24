@@ -29,18 +29,18 @@ const About = () => (
       </div>
       <div className="card">
         <p className="text-lg">
-          Hello, I'm Jackson 👋 I've recently graduated from the University of
-          Bristol, where I achieved a first class Master's in Computer Science.
-          Currently, I'm particularly interested in
+          Hello, I&#39;m Jackson 👋 I&#39;ve recently graduated from the University of
+          Bristol, where I achieved a first class Master&&#39;s in Computer Science.
+          Currently, I&#39;m particularly interested in
           <span className="font-semibold"> front-end work</span> and
           <span className="font-semibold"> games development</span>,
           having distinct experience from working on{" "}
           <Link className="hyperlink underline" href="/projects">
             projects
           </Link>{" "}
-          in these area during my degree and in my own time. I'm incredibly
-          motivated by work which I'm interested in, and would love to work on
-          projects which I can be passionate about. When I'm not working on my
+          in these area during my degree and in my own time. I&#39;m incredibly
+          motivated by work which I&#39;m interested in, and would love to work on
+          projects which I can be passionate about. When I&#39;m not working on my
           own projects, I love playing video games, reviewing film and TV, and
           working out. Some of my favourites can be found{" "}
           <Link className="hyperlink underline" href="./about/favourites">

@@ -32,7 +32,7 @@ const Project = (project: ProjectProps) => {
         {project.skills.map((skill) => (
           <p
             key={skill}
-            className="bg-secondary text-accent-1 px-2 py-1 rounded-lg text-sm"
+            className="bg-orange-300 text-orange-900 px-1 rounded-md text-sm"
           >
             {skill}
           </p>

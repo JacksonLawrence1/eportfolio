@@ -1,6 +1,7 @@
 export const projects = [
   {
     title: "Warcraft Portfolio",
+    id: "wp",
     date: "Jul. 2023 -> Sep. 2023",
     image: "/images/warcraft-portfolio.png",
     description:
@@ -20,10 +21,11 @@ export const projects = [
   {
     title: "Sensitivity Converter",
     date: "Jul. 2023",
+    id: "sc",
     image: "/images/sensitivity-converter.png",
     description:
       "A very simple tool designed to help players easily convert their mouse sensitivity values between games. This small project was mainly created to help me learn the basics of React and Tailwind, but I still use it when swapping sensitivity between games.",
-    skills: ["JavaScript", "React", "NextJs", "TailwindCSS"],
+    skills: ["JavaScript", "React", "NextJS", "TailwindCSS"],
     buttons: [
       {
         name: "Website",
@@ -37,10 +39,11 @@ export const projects = [
   },
   {
     title: "Morbent Manor",
+    id: "mm",
     date: "Jan. 2023 -> May. 2023",
     image: "/images/morbent-manor.png",
     description:
-      "Developed as part of my final year thesis at university. Morbent Manor is a 2D roguelike where the player must traverse through a series of levels, gaining intriguing powerups modelled around MOBA style gameplay. I achieved a high first (80%) for this project, involving over 10,000+ lines of C# code, 224 unit tests and 35+ custom made 2D sprite sheets drawn and animinated using Aseprite. Please contact me if you would like to see the source code or the dissertation itself as I am planning on releasing it publicly on Steam.",
+      "Developed as part of my final year thesis at university. Morbent Manor is a 2D roguelike where the player must traverse through a series of levels, gaining intriguing powerups modelled around MOBA style gameplay. I achieved a high first (80%) for this project, involving over 10,000+ lines of C# code, 224 unit tests and 35+ custom made 2D sprite sheets drawn and animated using Aseprite. Please contact me if you would like to see the source code or the dissertation itself as I am planning on releasing it publicly on Steam.",
     skills: ["C#", "Unity", "OOP", "Animation", "State Machines"],
     buttons: [
       {
@@ -55,11 +58,12 @@ export const projects = [
   },
   {
     title: "Kitchen Feud",
+    id: "kf",
     date: "Jan. 2022 -> May. 2022",
     image: "/images/kf.jpg",
     description:
       "Working alongside 5 other students, we created a 2D multiplayer game in Unity as part of the degree's Year 3 games project. Kitchen Feud is a chaotic 3D cooking game where two teams compete to run the best resturant. I was mainly responsible for working on the online interaction in the game, through RPC calls using the Photon plugin. This included interactions such as rejoining after having disconnected, and syncing the game state across all players.",
-    skills: ["C#", "Unity", "OOP", "Online", "RPCs"],
+    skills: ["C#", "Unity", "OOP", "Multiplayer", "RPCs"],
     buttons: [
       {
         name: "Play Here",
@@ -77,6 +81,7 @@ export const projects = [
   },
   {
     title: "C++ Rendering Engine",
+    id: "re",
     date: "Oct. 2021 -> Dec. 2021",
     image: "/images/i18.bmp",
     description:
@@ -91,6 +96,7 @@ export const projects = [
   },
   {
     title: "Ale Trail",
+    id: "at",
     date: "Oct. 2020 -> May. 2021",
     image: "/images/pilgrim.jpg",
     description:
@@ -105,6 +111,7 @@ export const projects = [
   },
   {
     title: "Graph Calculator",
+    id: "gc",
     date: "Sep. 2018 -> Mar. 2019",
     image: "/images/graph-calculator.png",
     description:

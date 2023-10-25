@@ -38,7 +38,7 @@ const About = () => (
           <Link className="hyperlink underline" href="/projects">
             projects
           </Link>{" "}
-          in these area during my degree and in my own time. I&#39;m incredibly
+          in these areas during my degree and in my own time. I&#39;m incredibly
           motivated by work which I&#39;m interested in, and would love to work on
           projects which I can be passionate about. When I&#39;m not working on my
           own projects, I love playing video games, reviewing film and TV, and

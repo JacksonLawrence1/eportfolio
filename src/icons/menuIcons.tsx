@@ -72,7 +72,7 @@ const MenuIcons = ({children} : {children : React.ReactNode}) => {
       </div>
       {/* website cosmetics here, such as theming */}
       <div className="flex absolute right-0 p-4 gap-4">
-        <MenuIcon icon={soundIcon} tooltip="Sound" />
+        <MenuIcon icon={soundIcon} tooltip="Sound (WIP)" />
         <MenuIcon icon={themeIcon} tooltip="Theme" />
       </div>
       {children}

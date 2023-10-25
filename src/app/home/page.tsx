@@ -13,7 +13,7 @@ const Home = () => (
         <h1 className="text-4xl">Software Engineer & Game Dev</h1>
       </div>
     </div>
-    <div className="flex gap-8">
+    <div className="flex gap-6">
     <Link href="/about">
         <button className="button">About Me</button>
       </Link>
@@ -28,6 +28,10 @@ const Home = () => (
         rel="noopener noreferrer"
       >
         <button className="button">GitHub</button>
+      </Link>
+
+      <Link href="/cv">
+        <button className="button">CV</button>
       </Link>
 
       <Link href="/contact">

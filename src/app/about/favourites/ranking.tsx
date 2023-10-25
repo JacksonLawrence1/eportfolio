@@ -25,7 +25,7 @@ const Ranking = ({ title, items }: RankingProps) => {
       <div className="card flex flex-col gap-2 w-72">
         <p className="text-center text-2xl">{title}</p>
         {items.map((item, index) => (
-          <div key={index} className="flex gap-4 items-center bg-accent-2 p-2 rounded-md shadow-lg">
+          <div key={index} className="flex gap-4 items-center bg-primary p-2 rounded-md shadow-lg">
             <img src={item.imageLink} alt={item.name} className="image-icon" />
             {renderLink(item)}
           </div>

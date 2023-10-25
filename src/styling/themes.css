@@ -4,8 +4,11 @@
 
   --color-primary: 71 26 1;
   --color-seconday: 252 165 4;
+  --color-tertiary: 124 45 18;
 
   color: #fdba74;
+
+  --color-text: 253 186 116;
 
   --color-accent-1: 255 237 213;
   --color-accent-2: 67 20 7;
@@ -16,8 +19,11 @@
 
   --color-primary: 242 129 53;
   --color-seconday: 249 115 22;
+  --color-tertiary: 255 237 213;
 
   color: #40120a;
+
+  --color-text: 64, 18, 10;
 
   --color-accent-1: 186 60 20;
   --color-accent-2: 251 146 60;

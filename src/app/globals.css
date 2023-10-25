@@ -34,7 +34,7 @@
     }
 
     .card {
-        @apply bg-primary mx-4 justify-center rounded-lg shadow-lg px-4 py-4;
+        @apply bg-tertiary mx-4 justify-center rounded-lg shadow-lg px-4 py-4;
     }
     
     .icon-tooltip:before {

@@ -16,6 +16,7 @@ const config: Config = {
         bkg2: "rgb(var(--color-bkg2) / <alpha-value>)",
         primary: "rgb(var(--color-primary) / <alpha-value>)",
         secondary: "rgb(var(--color-seconday) / <alpha-value>)",
+        tertiary: "rgb(var(--color-tertiary) / <alpha-value>)",
       }
     }
   },

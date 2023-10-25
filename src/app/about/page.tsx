@@ -30,7 +30,7 @@ const About = () => (
       <div className="card">
         <p className="text-lg">
           Hello, I&#39;m Jackson 👋 I&#39;ve recently graduated from the University of
-          Bristol, where I achieved a first class Master&&#39;s in Computer Science.
+          Bristol, where I achieved a first class Master&#39;s in Computer Science.
           Currently, I&#39;m particularly interested in
           <span className="font-semibold"> front-end work</span> and
           <span className="font-semibold"> games development</span>,

@@ -8,7 +8,14 @@
         h-12 w-12 mt-2 mb-2 mx-auto text-3xl shadow-lg
         bg-primary rounded-3xl
         hover:scale-125 hover:text-accent-1 hover:rounded-2xl hover:text-4xl hover:bg-accent-2
-        transition-all ease-linear cursor-pointer;
+        transition-all ease-linear cursor-pointer origin-center;
+    }
+
+    .icon-enabled {
+        @apply relative flex items-center justify-center
+        h-12 w-12 mt-2 mb-2 mx-auto shadow-lg
+        scale-125 text-accent-1 rounded-2xl text-4xl bg-accent-2 
+        cursor-pointer;
     }
     
     .icon-tooltip {
@@ -21,7 +28,7 @@
     }
 
     .dropdown-content {
-        @apply absolute w-auto min-w-fit p-2
+        @apply absolute w-32 min-w-max p-2 z-10
         rounded-md shadow-lg bg-primary;
     }
 

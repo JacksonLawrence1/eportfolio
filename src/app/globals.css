@@ -45,7 +45,7 @@
     }
 
     .hero {
-        @apply flex flex-col items-center mx-auto h-screen gap-8 justify-center;
+        @apply flex flex-col justify-center items-center mx-auto gap-8 min-h-screen py-4;
     }
 
     .image-icon {

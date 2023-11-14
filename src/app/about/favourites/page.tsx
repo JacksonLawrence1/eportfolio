@@ -6,7 +6,7 @@ const Favourites = () => {
   return (
     <div className="hero">
       <h1 className="text-secondary text-5xl">Favourites</h1>
-      <div className="flex justify-center">
+      <div className="flex flex-wrap justify-center gap-y-4">
         <Ranking title="Games" items={games} />
         <Ranking title="Movies" items={movies} />
         <Ranking title="Directors" items={directors} />

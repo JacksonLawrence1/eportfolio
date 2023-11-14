@@ -1,15 +1,13 @@
 // declare the type of the props for the MenuIcon component
-import { IconType } from "react-icons";
-
 import Icon from "./icon";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type ToggleProps = {
   onIcon: React.ReactNode;
   offIcon: React.ReactNode;
   onToggle: () => void;
   tooltip?: string;
-  initial?: "on" | "off";
+  initial?: string;
 };
 
 const Toggle = ({ onIcon, offIcon, onToggle, tooltip, initial = "on" }: ToggleProps) => {
@@ -22,6 +20,12 @@ const Toggle = ({ onIcon, offIcon, onToggle, tooltip, initial = "on" }: TogglePr
     setIconState(!iconState);
     onToggle();
   };
+
+  // update icon once updated from local storage
+  useEffect(() => {
+    setIcon(initial === "on" ? onIcon : offIcon);
+    setIconState(initial === "on");
+  }, [initial]);
 
   return <Icon icon={icon} onClick={onChange} tooltip={tooltip} />;
 };

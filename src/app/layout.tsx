@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter, Roboto, Varta } from "next/font/google";
 
-import MenuIcons from "@/icons/menuIcons";
+import MenuIcons from "@/app/menuIcons";
 
 const roboto = Roboto({ weight: "400", subsets: ["latin"] });
 const inter = Inter({ subsets: ["latin"] });

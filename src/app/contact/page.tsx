@@ -19,7 +19,7 @@ const Contact = () => (
       >
         <button className="button">GitHub</button>
       </Link>
-      <Link href="/cv">
+      <Link href="/contact/cv">
         <button className="button">CV</button>
       </Link>
     </div>

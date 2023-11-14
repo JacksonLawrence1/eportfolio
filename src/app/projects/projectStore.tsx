@@ -156,7 +156,7 @@ export const getProjects = (sortIndex: number = 0, reverse: boolean = false) => 
 
   if (sortIndex === 1) {
     // sort by subjective scale of project
-    projects = SortProject(["wp", "sc", "mm", "kf", "re", "at", "gc"]);
+    projects = SortProject(["mm", "kf", "wp", "at", "gc", "re", "sc"]);
   } else if (sortIndex === 2) {
     projects.sort((a, b) => (a.title > b.title) ? 1 : -1);
   } else if (sortIndex === 3) {

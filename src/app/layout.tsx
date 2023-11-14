@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter, Roboto } from "next/font/google";
+import { Inter, Roboto, Varta } from "next/font/google";
 
 import MenuIcons from "@/icons/menuIcons";
 

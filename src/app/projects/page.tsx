@@ -10,8 +10,11 @@ import { FaCheck } from "react-icons/fa";
 import { getProjects } from "./projectStore";
 
 const Projects = () => {
-  let [projects, setProjects] = useState(getProjects(1));
-  let [sortIndex, setSortIndex] = useState(1);
+  const initialIndex : number = 0;
+
+  // make sure to use the same initial index
+  let [projects, setProjects] = useState(getProjects(initialIndex));
+  let [sortIndex, setSortIndex] = useState(initialIndex);
   let [open, setOpen] = useState(false);
 
   const toggleOpen = (event : React.MouseEvent) => {

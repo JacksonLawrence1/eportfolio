@@ -22,18 +22,6 @@ const Home = () => (
         <button className="button">Projects</button>
       </Link>
 
-      <Link
-        href="https://github.com/JacksonLawrence1"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <button className="button">GitHub</button>
-      </Link>
-
-      <Link href="/cv">
-        <button className="button">CV</button>
-      </Link>
-
       <Link href="/contact">
         <button className="button">Contact</button>
       </Link>

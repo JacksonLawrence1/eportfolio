@@ -1,3 +1,5 @@
+'use client'
+
 import Link from "next/link";
 import ConditionalWrapper from "./conditionalWrapper";
 
@@ -23,6 +25,17 @@ const linkElement = (children: React.ReactNode, link?: string): React.ReactNode 
 };
 
 const Icon = ({ icon, onClick, tooltip, link }: Icon) => {
+  const click = new Audio("sounds/click.wav");
+
+  const onClickHandler = () => {
+    if (onClick) {
+      onClick();
+    }
+
+    // play click sound if sound is enabled
+    //click.play();
+  };
+
   return (
     <div>
       {/* wrap with a link component if one has been provided */}
@@ -30,7 +43,7 @@ const Icon = ({ icon, onClick, tooltip, link }: Icon) => {
         condition={link !== undefined}
         wrapper={(children) => linkElement(children, link)}
       >
-        <div className="icon group" onClick={onClick}>
+        <div className="icon group" onClick={onClickHandler}>
           {icon}
           {tooltip && (
             <span className="icon-tooltip group-hover:scale-100">

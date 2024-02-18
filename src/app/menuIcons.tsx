@@ -47,10 +47,7 @@ const MenuIcons = ({ children }: { children: React.ReactNode }) => {
   const changeEffects = () => setEffects(!effects);
 
   return (
-    <div
-      className="bg-gradient-to-b from-bkg1 to-bkg2"
-      data-theme={currentTheme}
-    >
+    <div data-theme={currentTheme} className="z-50">
       {/* social media icons here */}
       <div className="flex absolute left-0 p-4 gap-4">
         <Icon icon={<AiFillHome />} link="/home" tooltip="Home" />

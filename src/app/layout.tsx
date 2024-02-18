@@ -1,14 +1,13 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter, Roboto, Varta } from "next/font/google";
+import { Roboto } from "next/font/google";
 
 import MenuIcons from "@/app/menuIcons";
 
 const roboto = Roboto({ weight: "400", subsets: ["latin"] });
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "eportfolio",
+  title: "Jackson Lawrence's Porfolio",
 };
 
 export default function RootLayout({
@@ -24,7 +23,9 @@ export default function RootLayout({
       </head>
       <body className={roboto.className}>
         <MenuIcons>
-          {children}
+          <div className="bg-gradient-to-b from-bkg1 to-bkg2">
+            {children}
+          </div>
         </MenuIcons>
       </body>
     </html>

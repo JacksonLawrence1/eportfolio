@@ -17,7 +17,7 @@ const config: Config = {
         primary: "rgb(var(--color-primary) / <alpha-value>)",
         secondary: "rgb(var(--color-seconday) / <alpha-value>)",
         tertiary: "rgb(var(--color-tertiary) / <alpha-value>)",
-      }
+      },
     }
   },
   plugins: [],

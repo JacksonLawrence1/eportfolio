@@ -6,10 +6,10 @@ export const movies = [
     link: "https://www.imdb.com/title/tt0482571/?ref_=nv_sr_srsg_0_tt_7_nm_1_q_the%2520prestige",
   },
   {
-    name: "The Dark Knight",
+    name: "Jurassic Park",
     imageLink:
-      "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg",
-    link: "https://www.imdb.com/title/tt0468569/?ref_=nv_sr_srsg_1_tt_7_nm_0_q_the%2520dar",
+      "https://static.posters.cz/image/750/canvas-print-jurassic-park-classic-logo-i111309.jpg",
+    link: "https://www.imdb.com/title/tt0107290/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_jurassi",
   },
   {
     name: "The Social Network",
@@ -42,7 +42,7 @@ export const directors = [
 
 export const games = [
   {
-    name: "Skyrim",
+    name: "The Elder Scrolls V: Skyrim",
     imageLink:
       "https://image.api.playstation.com/vulcan/ap/rnd/202009/2820/h12URI7MdswtFPFHpkppNh2z.png",
     link: "https://en.wikipedia.org/wiki/The_Elder_Scrolls_V:_Skyrim",

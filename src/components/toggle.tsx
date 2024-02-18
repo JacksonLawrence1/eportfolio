@@ -8,9 +8,10 @@ type ToggleProps = {
   onToggle: () => void;
   tooltip?: string;
   initial?: string;
+  hidden?: boolean;
 };
 
-const Toggle = ({ onIcon, offIcon, onToggle, tooltip, initial = "on" }: ToggleProps) => {
+const Toggle = ({ onIcon, offIcon, onToggle, tooltip, initial = "on", hidden }: ToggleProps) => {
   const [icon, setIcon] = useState(initial === "on" ? onIcon : offIcon);
   const [iconState, setIconState] = useState(initial === "on");
 
@@ -27,7 +28,7 @@ const Toggle = ({ onIcon, offIcon, onToggle, tooltip, initial = "on" }: TogglePr
     setIconState(initial === "on");
   }, [initial]);
 
-  return <Icon icon={icon} onClick={onChange} tooltip={tooltip} />;
+  return <Icon icon={icon} onClick={onChange} tooltip={tooltip} hidden={hidden} />;
 };
 
 export default Toggle;

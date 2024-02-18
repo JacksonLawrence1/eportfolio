@@ -69,15 +69,15 @@ export const tvShows = [
     link: "https://www.imdb.com/title/tt4158110/?ref_=nv_sr_srsg_0_tt_7_nm_1_q_mr%2520robot"
   },
   {
+    name: "Twin Peaks",
+    imageLink:
+      "https://www.commonsensemedia.org/sites/default/files/styles/ratio_16_9_small/public/screenshots/csm-tv/twin-1-min.jpg",
+    link: "https://www.imdb.com/title/tt0098936/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_twin"
+  },
+  {
     name: "Breaking Bad",
     imageLink:
       "https://media.gq.com/photos/558288ab1177d66d68d51c9d/4:3/w_600,h_450,c_limit/blogs-the-feed-breaking-bad-roundup-635.jpg",
     link: "https://www.imdb.com/title/tt0903747/?ref_=nv_sr_srsg_0_tt_8_nm_0_q_breaki"
-  },
-  {
-    name: "Dexter",
-    imageLink:
-      "https://m.media-amazon.com/images/M/MV5BZjkzMmU5MjMtODllZS00OTA5LTk2ZTEtNjdhYjZhMDA5ZTRhXkEyXkFqcGdeQXVyOTA3MTMyOTk@._V1_.jpg",
-    link: "https://www.imdb.com/title/tt0773262/?ref_=nv_sr_srsg_0_tt_2_nm_6_q_dexter"
-  },
+  }
 ];

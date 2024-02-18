@@ -60,12 +60,14 @@ const MenuIcons = ({ children }: { children: React.ReactNode }) => {
           offIcon={<IoIosFlashOff />}
           tooltip="Effects (WIP)"
           onToggle={changeEffects}
+          hidden={true}
         />
         <Toggle
           onIcon={<BsFillVolumeUpFill />}
           offIcon={<BsFillVolumeMuteFill />}
           tooltip="Sound (WIP)"
           onToggle={changeSound}
+          hidden={true}
         />
         <Toggle
           onIcon={<MdLightMode />}

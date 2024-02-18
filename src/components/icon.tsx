@@ -8,6 +8,7 @@ type Icon = {
   onClick?: () => void;
   tooltip?: string;
   link?: string;
+  hidden?: boolean;
 };
 
 const linkElement = (children: React.ReactNode, link?: string): React.ReactNode => {
@@ -24,20 +25,16 @@ const linkElement = (children: React.ReactNode, link?: string): React.ReactNode 
   );
 };
 
-const Icon = ({ icon, onClick, tooltip, link }: Icon) => {
-  const click = new Audio("sounds/click.wav");
-
+const Icon = ({ icon, onClick, tooltip, link, hidden }: Icon) => {
   const onClickHandler = () => {
     if (onClick) {
       onClick();
     }
-
-    // play click sound if sound is enabled
-    //click.play();
   };
 
+  const visible: string = `${hidden ? "hidden" : ""}`;
   return (
-    <div>
+    <div className={visible}>
       {/* wrap with a link component if one has been provided */}
       <ConditionalWrapper
         condition={link !== undefined}

@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+.background-gradient {
+	background-image: radial-gradient(
+		farthest-side circle at left 30% bottom 0%,
+		#5f2fbd 20%,
+		#170063 50%,
+		#050029 80%
+	);
+}
+
+.star {
+	position: absolute;
+	background: white;
+	border-radius: 50%;
+	opacity: 0.6;
+	z-index: 5;
+}
+
+.limelight {
+	font-family: 'Limelight', sans-serif;
+	font-weight: 400;
+}
+
+.italiana {
+	font-family: 'Italiana', sans-serif;
+	font-weight: 400;
+}
+
+.lato {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+}
+
+.wrapper {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+	text-transform: uppercase;
+}
+
+li a:hover {
+	color: #f8f8f8;
+	text-decoration: underline;
+	text-underline-offset: 0.3em;
+}
+
+.info-section {
+	height: 100%;
+	padding: 8rem 2rem;
+}
+
+.section-header {
+	font-size: 2rem;
+}
+
+
+.divider {
+	width: 100%;
+	height: 1px;
+	background-color: theme('colors.gray.600');
+}
+
+.btn {
+	text-transform: uppercase;
+	padding: 0.5rem 1rem;
+	border-radius: 0.25rem;
+	background-color: theme('colors.primary.500');
+	color: black; 
+}
+
+.btn:hover {
+	background-color: theme('colors.primary.600');
+	color: theme('colors.accent.900');
+}

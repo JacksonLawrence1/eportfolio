@@ -19,6 +19,7 @@
 	}
 	
 	onMount(() => {
+		// NOTE: Remember to turn this back on
 		//addStars(250);
 	});
 </script>

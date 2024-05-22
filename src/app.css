@@ -58,13 +58,12 @@ li a:hover {
 
 .info-section {
 	height: 100%;
-	padding: 8rem 2rem;
+	padding: 8rem 2rem; 
 }
 
 .section-header {
 	font-size: 2rem;
 }
-
 
 .divider {
 	width: 100%;

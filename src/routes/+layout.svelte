@@ -30,7 +30,7 @@
 		<div class="flex flex-col flex-grow gap-4 max-w-[640px] basis-1/3">
 			<h3 class="text-2xl font-bold">Contact</h3>
 			<p class="text-xl">
-				Feel free to send me an email at <a class="underline hover:text-gray-200" href="mailto:jplqqz@gmail.com">jplqqz@gmail.com</a> or find me on GitHub. I'm always happy to chat about projects, work oppurtunities, collaborations, or anything else you have in mind.
+				Feel free to send me an email at <a class="underline hover:text-gray-200" href="mailto:jplqqz@gmail.com">jplqqz@gmail.com</a> or you can also find me on GitHub. I'm always happy to chat about projects, work opportunities, collaborations, or anything else you have in mind.
 			</p>
 		</div>
 		<div class="flex flex-col gap-4 basis-full sm:basis-1/4">
@@ -63,7 +63,10 @@
 		<small class="text-gray-400 text-[0.6rem]">Here's to the fools who dream.</small>
 		<ul class="flex flex-wrap gap-8 justify-between basis-full sm:basis-auto sm:justify-end">
 			<li>
-				<a href="/">Source Code</a>
+				<a href="/">v1.0</a>
+			</li>
+			<li>
+				<a href="https://github.com/JacksonLawrence1/eportfolio" target="_blank">Source Code</a>
 			</li>
 			<li>
 				<a href="/">Back to Top</a>

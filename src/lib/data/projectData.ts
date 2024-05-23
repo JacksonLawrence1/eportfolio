@@ -47,14 +47,14 @@ export const projects: Project[] = [
 		name: 'Letterboxd Rec',
 		tags: ['Go', 'HTMX'],
 		overview: 'Accurate Movie recommendations, built using Go',
-		imageUrl: 'letterboxd-rec.png',
+		imageUrl: 'placeholder.png',
 	},
 	{
 		id: 'blender-farm',
 		name: 'AWS Rendering Farm',
 		tags: ['Python', 'AWS'],
 		overview: 'Rendering farm for Blender built with AWS',
-		imageUrl: 'blender-farm.png',
+		imageUrl: 'placeholder.png',
 	},
 	{
 		id: 'graph-calculator',
@@ -75,14 +75,14 @@ export const projects: Project[] = [
 		name: 'Director Spectrum',
 		tags: ['Svelte', 'TypeScript'],
 		overview: "Showcase of different film director styles",
-		imageUrl: 'director-spectrum.png',
+		imageUrl: 'placeholder.png',
 	},
 	{
 		id: 'bse',
 		name: 'Bristol Stock Exchange',
 		tags: ['Python'],
 		overview: 'Evaluation of an automated and adaptive stock trading strategy',
-		imageUrl: 'bse.png',
+		imageUrl: 'placeholder.png',
 	}
 ]
 

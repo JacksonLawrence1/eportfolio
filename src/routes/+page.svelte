@@ -10,7 +10,7 @@
 		>
 			<h3 class="text-xl">Hello, I'm</h3>
 			<h1 class="text-6xl origin-left italiana">Jackson Lawrence</h1>
-			<h2 class="text-md"><strong>Full stack</strong> developer</h2>
+			<h2 class="text-md"><strong>Full-stack</strong> developer</h2>
 		</div>
 	</div>
 	<Landscape />

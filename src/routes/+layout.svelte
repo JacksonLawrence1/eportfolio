@@ -29,7 +29,7 @@
 	<div id="contact" class="flex flex-wrap gap-10 justify-between py-8 w-full wrapper">
 		<div class="flex flex-col flex-grow gap-4 max-w-[640px] basis-1/3">
 			<h3 class="text-2xl font-bold">Contact</h3>
-			<p class="text-xl">
+			<p>
 				Feel free to send me an email at <a class="underline hover:text-gray-200" href="mailto:jplqqz@gmail.com">jplqqz@gmail.com</a> or you can also find me on GitHub. I'm always happy to chat about projects, work opportunities, collaborations, or anything else you have in mind.
 			</p>
 		</div>

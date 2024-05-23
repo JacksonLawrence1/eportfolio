@@ -59,6 +59,7 @@ li a:hover {
 .info-section {
 	height: 100%;
 	padding: 8rem 2rem; 
+	overflow: hidden;
 }
 
 .section-header {
@@ -82,4 +83,12 @@ li a:hover {
 .btn:hover {
 	background-color: theme('colors.primary.600');
 	color: theme('colors.accent.900');
+}
+
+p {
+	font-size: 1.25rem;
+
+	@media (max-width: 640px) {
+		font-size: 1.1rem;
+	}
 }

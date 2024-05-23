@@ -3,9 +3,22 @@
 </script>
 
 <div id="about" class="info-section bg-base-600">
-	<div class="flex flex-col items-start wrapper gap-4">
+	<div class="flex flex-col gap-4 items-start wrapper">
 		<h2 class="section-header">About Me</h2>
-		<p class="text-lg">Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.</p>
+		<div class="grid grid-cols-1 gap-8 gap-y-12 w-full lg:grid-cols-3">
+			<div class="flex flex-col gap-4 lg:col-span-2">
+				<p>I'm a full-stack developer based in London, UK. I graduated from the University of Bristol with a first-class masters degree in Computer Science in 2023. I like to work creatively on interesting projects, explore new technologies and solve complex coding problems.</p>
+
+				<p>I have a particular interest in making beautiful, yet performant front-end designs. I also enjoy developing games, which you can find more about <a class="underline" href="#projects">here</a>.</p> 
+
+				<p>In my free time, you can find me playing games, or watching and reviewing films. Feel free to <a class="underline" href="#contact">contact me</a> for any more info, or if you just want to say hi!</p>
+
+				<p>I also use Neovim (BTW).</p>
+			</div>
+			<div class="flex justify-center items-start lg:items-center">
+				<div class="w-64 h-64 bg-black rounded-lg"></div>
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -14,6 +27,3 @@
 <Projects />
 
 <div class="divider"></div>
-
-<style>
-</style>

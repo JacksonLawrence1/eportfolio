@@ -1,13 +1,15 @@
 <script lang="ts">
+	import { type Project } from '$lib/data/projectData';
+
 	type Props = {
-		name: string;
-		imageUrl: string;
-		overview: string;
+		item: Project;
 		index: number;
 		select: (i: number) => void;
 	};
 
-	let { name, imageUrl, index, overview, select }: Props = $props();
+	let { item, index, select }: Props = $props();
+
+	const { name, overview, imageUrl } = $derived(item);
 	const selected = $derived(index === 1);
 </script>
 

@@ -14,7 +14,7 @@
 </script>
 
 <div
-	class={`flex overflow-hidden relative w-full h-full rounded-md group ${selected ? 'opacity-100' : 'hover:opacity-100 opacity-50 duration-200'}`}
+	class={`flex overflow-hidden relative rounded-md group ${selected ? 'opacity-100' : 'hover:opacity-100 opacity-50 duration-200'}`}
 >
 	<img
 		src={`images/${imageUrl}`}

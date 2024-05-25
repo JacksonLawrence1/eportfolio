@@ -38,19 +38,21 @@
 			<ul class="flex flex-col gap-2 text-lg">
 				<li>
 					<a class="group" href="mailto:jplqqz@gmail.com">
-						<MailIcon />
+						<MailIcon classList="group-hover:scale-110 group-hover:text-gray-200" />
 						<p class="group-hover:text-gray-200">jplqqz@gmail.com</p>
 					</a>
 				</li>
 				<li>
+					<!-- TODO: Add Link -->
 					<a class="group" href="/">
-						<GitHubIcon />
+						<GitHubIcon classList="group-hover:scale-110 group-hover:text-gray-200" />
 						<p class="group-hover:text-gray-200">GitHub</p>
 					</a>
 				</li>
 				<li>
+					<!-- TODO: Add Link -->
 					<a class="group" href="/">
-						<ResumeIcon />
+						<ResumeIcon classList="group-hover:scale-110 group-hover:text-gray-200" />
 						<p class="group-hover:text-gray-200">CV / Resume</p>
 					</a>
 				</li>

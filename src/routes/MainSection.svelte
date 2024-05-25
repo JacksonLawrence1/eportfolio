@@ -22,8 +22,6 @@
 	</div>
 </div>
 
-<div class="divider"></div>
-
 <Projects />
 
 <div class="divider"></div>

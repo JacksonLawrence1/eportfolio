@@ -56,6 +56,14 @@ li a:hover {
 	text-underline-offset: 0.3em;
 }
 
+p {
+	font-size: 1.25rem;
+
+	@media (max-width: 640px) {
+		font-size: 1.1rem;
+	}
+}
+
 .info-section {
 	height: 100%;
 	padding: 8rem 2rem; 
@@ -64,6 +72,11 @@ li a:hover {
 
 .section-header {
 	font-size: 2rem;
+
+	@media (min-width: 768px) {
+		font-size: 3rem;
+		line-height: 1;
+	}
 }
 
 .divider {
@@ -73,22 +86,22 @@ li a:hover {
 }
 
 .btn {
+	font-size: 1.25rem;
+	line-height: 1.75rem;
 	text-transform: uppercase;
 	padding: 0.5rem 1rem;
 	border-radius: 0.25rem;
 	background-color: theme('colors.primary.500');
 	color: black; 
-}
 
-.btn:hover {
-	background-color: theme('colors.primary.600');
-	color: theme('colors.accent.900');
-}
+	&:hover {
+		background-color: theme('colors.primary.600');
+		color: theme('colors.accent.900');
+	}
 
-p {
-	font-size: 1.25rem;
-
-	@media (max-width: 640px) {
-		font-size: 1.1rem;
+	&.empty {
+		background-color: inherit;
+		border: 2px solid white; 
+		color: white;
 	}
 }

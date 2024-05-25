@@ -5,47 +5,43 @@
 	import { fly } from 'svelte/transition';
 
 	type Props = {
-		// eslint-disable-next-line no-undef
 		items: T[];
 
-		// eslint-disable-next-line no-undef
 		ItemComponent: ComponentType<SvelteComponent<{ item: T, index: number, select: (i: number) => void }>>; 
 
-		// eslint-disable-next-line no-undef
 		currentItem: T;	
 
 		forwards: () => void;
 		backwards: () => void;
 	};
-
+	
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	let { items, ItemComponent, currentItem = $bindable(), forwards = $bindable(), backwards = $bindable() }: Props = $props();
 
-	// eslint-disable-next-line no-undef
 	const itemsArr: T[] = $state([...items]);
 	let itemsToShow = $state(7);
 
-	let animationDuration: number = $state(1);
+	let animationMultiplier: number = $state(1);
+	let animationDuration: number = $derived(400 * animationMultiplier);
 	
-
-	// these are both used, but eslint can't tell
-	//eslint-disable-next-line @typescript-eslint/no-unused-vars
 	forwards = () => {
 		const selected = itemsArr.shift();
 		if (selected) {
 			itemsArr.push(selected);
 		}
+
 		currentItem = itemsArr[1];
-		animationDuration = 1;
+		animationMultiplier = 1;
 	};
 
-	//eslint-disable-next-line @typescript-eslint/no-unused-vars
 	backwards = () => {
 		const selected = itemsArr.pop();
 		if (selected) {
 			itemsArr.unshift(selected);
 		}
+
 		currentItem = itemsArr[1];
-		animationDuration = 1;
+		animationMultiplier = 1;
 	};
 
 	function selectInput(i: number) {
@@ -56,7 +52,7 @@
 
 		for (let j = 0; j < i - 1; j++) {
 			forwards();
-			animationDuration = j + 1;
+			animationMultiplier = j + 1;
 		}
 	}
 
@@ -84,12 +80,12 @@
 	});
 </script>
 
-<div class="slider">
+<div class="relative slider">
 	{#each itemsArr.slice(0, itemsToShow) as item, i (item.id)}
 		<div
-			class="overflow-hidden bg-black rounded-lg project"
-			animate:flip={{ duration: 400 * animationDuration }}
-			in:fly={{x: i === 0 ? -250 : 250 * animationDuration, duration: 400 * animationDuration}}
+			class="overflow-hidden bg-black rounded-lg project w-full h-full"
+			animate:flip={{ duration: animationDuration }}
+			in:fly={{x: i === 0 ? -250 : 250 * animationMultiplier, duration: animationDuration }}
 		>
 			<svelte:component this={ItemComponent} {item} index={i} select={selectInput} />
 		</div>
@@ -117,11 +113,11 @@
 	.slider {
 		display: grid;
 		grid-template-columns: repeat(calc(var(--cols) + 2), 1fr);
+		grid-auto-flow: column;
 		width: calc(100% + 2 * var(--frac));
 		margin-left: calc(-1 * var(--frac));
-		grid-template-rows: repeat(1, 1fr);
-		grid-auto-rows: 0;
 		gap: 1rem;
+		transition: all 1s;
 	}
 
 	.project:last-child {

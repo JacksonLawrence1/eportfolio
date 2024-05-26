@@ -72,6 +72,8 @@
 	}
 
 	onMount(() => {
+		updateAnimationState.call(window);
+
 		// calls whenever window is resized
 		window.addEventListener('resize', updateAnimationState);
 
@@ -85,7 +87,7 @@
 		<div
 			class="overflow-hidden bg-black rounded-lg project w-full h-full"
 			animate:flip={{ duration: animationDuration }}
-			in:fly={{x: i === 0 ? -250 : 250 * animationMultiplier, duration: animationDuration }}
+			in:fly={{x: i === 0 ? '-100%' : `${100 * animationMultiplier}%`, duration: animationDuration }}
 		>
 			<svelte:component this={ItemComponent} {item} index={i} select={selectInput} />
 		</div>
@@ -121,10 +123,10 @@
 	}
 
 	.project:last-child {
-		mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+		mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0) 50%);
 	}
 
 	.project:first-child {
-		mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+		mask-image: linear-gradient(to left, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0) 50%);
 	}
 </style>

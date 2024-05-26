@@ -1,7 +1,6 @@
 <script>
 	import GitHubIcon from '$lib/icons/GitHubIcon.svelte';
 	import MailIcon from '$lib/icons/MailIcon.svelte';
-	import ResumeIcon from '$lib/icons/ResumeIcon.svelte';
 
 	import '../app.css';
 </script>
@@ -50,11 +49,12 @@
 					</a>
 				</li>
 				<li>
-					<!-- TODO: Add Link -->
+					<!-- TODO: CV 
 					<a class="group" href="/">
 						<ResumeIcon classList="group-hover:scale-110 group-hover:text-gray-200" />
 						<p class="group-hover:text-gray-200">CV / Resume</p>
 					</a>
+					-->
 				</li>
 			</ul>
 		</div>
@@ -63,7 +63,7 @@
 		class="flex flex-wrap gap-8 justify-between items-end pt-8 w-full font-bold uppercase wrapper"
 	>
 		<small class="text-gray-400 text-[0.6rem]">Here's to the fools who dream.</small>
-		<ul class="flex flex-wrap gap-8 justify-between basis-full sm:basis-auto sm:justify-end">
+		<ul class="flex flex-wrap gap-8 justify-between basis-full text-sm sm:basis-auto sm:justify-end md:text-base">
 			<li>
 				<a href="/">v1.0</a>
 			</li>

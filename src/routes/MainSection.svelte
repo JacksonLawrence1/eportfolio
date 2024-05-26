@@ -15,9 +15,6 @@
 
 				<p>I also use Neovim (BTW).</p>
 			</div>
-			<div class="flex justify-center items-start lg:items-center">
-				<div class="w-64 h-64 bg-black rounded-lg"></div>
-			</div>
 		</div>
 	</div>
 </div>

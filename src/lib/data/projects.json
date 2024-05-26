@@ -8,7 +8,7 @@
 		"imageUrl": "morbent-manor.png",
 		"description": "Morbent Manor is a dungeon-crawling roguelike that I built in Unity as part of my master's dissertation, achieving a first class grade of 80%. \n The game features procedurally generated levels, a variety of enemies, and explores a unique MOBA-style combat system. I also created and animated many custom assets using Aseprite and Unity's robust state machine system. \n The game is available to play as a demo on itch.io. If you would like to learn more about the game, read my dissertation or look at the source code, please feel free to contact me.",
 		"buttons": [
-			{ "text": "Demo", "link": "https://jacksonl22.itch.io/morbent-manor" },
+			{ "text": "Play", "link": "https://jacksonl22.itch.io/morbent-manor" },
 			{ "text": "Contact", "link": "#contact" }
 		]
 	},
@@ -21,7 +21,7 @@
 		"imageUrl": "kf.jpg",
 		"description": "Kitchen Feud is an online team-based cooking game built in Unity. Along with 5 other developers, we created this game during our 3rd year at University. \n Inspired by Overcooked, the game features a competitive cooking environment where players follow recipes to earn points, and are encouraged to sabotage the enemy kitchen to maximize their score. \n The full game is available to play using the demo link below, along with the source code and final report on GitHub.",
 		"buttons": [
-			{ "text": "Demo", "link": "https://lokhei.github.io/kitchen_feud/" },
+			{ "text": "Play", "link": "https://lokhei.github.io/kitchen_feud/" },
 			{ "text": "GitHub", "link": "https://github.com/KaliKaloo/Kitchen-Feud" }
 		]
 	},
@@ -70,7 +70,7 @@
 		"tags": ["Go", "htmx"],
 		"overview": "Accurate Movie recommendations, built using Go",
 		"imageUrl": "placeholder.png",
-		"description": "Letterboxd Rec is a tool to help provide accurate movie recommendations based on Letterboxd favourites. \n When provided a single movie, the tool uses a web scraper to concurrently gather data from users who hold the movie highly, i.e. in their 'top 4' favourites. \n To try and explore the performance of web apps using a non-JavaScript based framework, I built it entirely using just Go and htmx.",
+		"description": "Letterboxd Rec is a tool to help provide accurate movie recommendations based on Letterboxd favourites. \n When provided a single movie, the tool uses a web scraper to concurrently gather data from users who hold the movie highly, i.e. in their 'top 4' favourites. \n Built using a Go HTTP server, with htmx to perform AJAX requests, I wanted to explore the performance using a non-JavaScript framework for web development.",
 		"buttons": [
 			{ "text": "GitHub", "link": "https://github.com/JacksonLawrence1/letterboxd-rec" }
 		]
@@ -82,19 +82,19 @@
 		"tags": ["Python", "AWS"],
 		"overview": "Rendering farm for Blender built with AWS",
 		"imageUrl": "placeholder.png",
-		"description": "Helps speed up the process of rendering Blender projects using AWS instances. \n Using AWS EC2 instances as workers, the tool splits work so blender files can be rendered distributively. Includes options to render portions of files, and even includes a 'chaos testing' mode to simulate how the tool perseveres through heavy failure/load.",
+		"description": "A tool to help speed up the process of rendering Blender projects using AWS instances. \n Using EC2 instances as workers, the tool splits work so blender files can be rendered distributively. Includes options to render portions of files, and even includes a 'chaos testing' mode to simulate how the tool perseveres through heavy failure/load.",
 		"buttons": [
 			{ "text": "GitHub", "link": "https://github.com/JacksonLawrence1/aws-blender-farm" }
 		]
 	},
 	{
 		"id": "graph-calculator",
-		"name": "Graphing Calculator",
-		"year": 2017,
+		"name": "Graph Calculator",
+		"year": 2019,
 		"tags": ["Python", "Pygame"],
 		"overview": "Desmos like graphing calculator",
 		"imageUrl": "graph-calculator.png",
-		"description": "Graphing Calculator is a tool that allows users to graph equations and functions. The tool features a variety of graphing options, and allows users to easily input and visualize mathematical functions. The tool is built using Python and Pygame.",
+		"description": "A primitive graphing calculater built to help students visualise and understand the nature of mathematical functions. \n Inspired by Desmos a web-based graphing visualiser, I created this graphing calculator as part of my A-Levels. the tool allows users to input and quickly visualise a set of mathematical functions including polynomials, trigonometry and circles. \n I created the project with Python, along with Pygame to render the UI.",
 		"buttons": [
 			{ "text": "GitHub", "link": "https://github.com/JacksonLawrence1/GraphCalculatorProject" }
 		]
@@ -102,12 +102,13 @@
 	{
 		"id": "ale-trail",
 		"name": "Ale Trail",
-		"year": 2020,
+		"year": 2021,
 		"tags": ["Android", "Kotlin"],
 		"overview": "Pub crawl tracking app for Android devices",
 		"imageUrl": "pilgrim.jpg",
-		"description": "Ale Trail is a pub crawl tracking app for Android devices. The app features a variety of pub crawl routes, and allows users to track their progress and earn rewards. The app is built using Android and Kotlin.",
+		"description": "Ale Trail lets users track their progress during pub crawls and, once completed, win prizes. \n The app was created for a client as part of a group project alongside 4 other students during my 2nd year of University. Users scan a QR code to verify they have visited and can follow along using a map to track the locations of pubs on the trail. It also included an admin dashboard for user analytics. \n The app was built using Kotlin and Android Studio, with a MySQL databse for the backend. As the app was created for a client, the source code is not available, but if you would like to know more about the project, please feel free to contact me.",
 		"buttons": [
+			{ "text": "Video", "link": "https://www.youtube.com/watch?v=1zHG63kpoGY" },
 			{ "text": "Contact", "link": "#contact" }
 		]
 	},
@@ -115,10 +116,10 @@
 		"id": "director-spectrum",
 		"name": "Director Spectrum",
 		"year": 2024,
-		"tags": ["Svelte", "TypeScript"],
+		"tags": ["Svelte", "SvelteKit", "TypeScript"],
 		"overview": "Showcase of different film director styles",
 		"imageUrl": "placeholder.png",
-		"description": "Director Spectrum is a tool that showcases the different styles of film directors. The tool features a variety of directors and allows users to explore their filmography and style. The tool is built using Svelte and TypeScript.",
+		"description": "A website to showcases how film directors can fall into a spectrum of directing styles. \n Made as an effort to focus on front-end creativity, this small project allows users to view information about similar film directors and explore some of their filmography. \n Created using Svelte (with SvelteKit) and TypeScript.",
 		"buttons": [
 			{ "text": "Website", "link": "https://thedirectorspectrum.vercel.app" },
 			{ "text": "GitHub", "link": "https://github.com/JacksonLawrence1/director-spectrum" }

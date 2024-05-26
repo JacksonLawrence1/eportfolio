@@ -4,6 +4,7 @@ import GitHubIcon from '$lib/icons/GitHubIcon.svelte';
 import MailIcon from '$lib/icons/MailIcon.svelte';
 import PlayIcon from '$lib/icons/PlayIcon.svelte';
 import GlobeIcon from '$lib/icons/GlobeIcon.svelte';
+import VideoIcon from '$lib/icons/VideoIcon.svelte';
 
 type buttonComponent = ComponentType<SvelteComponent<{colour: string, classList?: string}>>;
 
@@ -22,11 +23,12 @@ export type ButtonProps = {
 const iconMap: Record<string, buttonComponent> = {
 	'GitHub': GitHubIcon,
 	'Contact': MailIcon,
-	'Demo': PlayIcon,
+	'Play': PlayIcon,
 	'Website': GlobeIcon,
+	'Video': VideoIcon,
 }
 
-const colouredButtons: Set<string> = new Set(['Website', 'Demo']);
+const colouredButtons: Set<string> = new Set(['Website', 'Play', 'Video']);
 
 // Add a button icon based on the text
 export function addButtonIcon({ text, link }: ButtonProps): Button {

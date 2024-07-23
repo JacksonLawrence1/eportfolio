@@ -5,7 +5,7 @@
 </script>
 
 <Icon {...$$restProps}>
-	<svg xmlns="http://www.w3.org/2000/svg" class="h-full w-full" viewBox="0 0 24 24">
+	<svg aria-label="video" xmlns="http://www.w3.org/2000/svg" class="h-full w-full" viewBox="0 0 24 24">
 		<path
 			fill="none"
 			stroke={colour}

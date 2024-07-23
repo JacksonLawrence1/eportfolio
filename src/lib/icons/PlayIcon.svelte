@@ -5,7 +5,7 @@
 </script>
 
 <Icon {...$$restProps}>
-	<svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" viewBox="0 0 48 48">
+	<svg aria-label="play" xmlns="http://www.w3.org/2000/svg" class="w-full h-full" viewBox="0 0 48 48">
 		<g fill="none" stroke={colour} stroke-linejoin="round" stroke-width="4">
 			<path
 				d="M32 18H16C9.373 18 4 23.373 4 30s5.373 12 12 12h16c6.627 0 12-5.373 12-12s-5.373-12-12-12Z"

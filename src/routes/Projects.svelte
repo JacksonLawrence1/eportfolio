@@ -4,7 +4,9 @@
 
 	import ProjectSliderComponent from '$lib/components/ProjectSliderComponent.svelte';
 	import ProjectInfo from '$lib/components/ProjectInfo.svelte';
+	import Title from '$lib/components/Title.svelte';
 
+	// declare here so we can assign them to buttons outside slider component
 	let backward: () => void = $state(() => {});
 	let forward: () => void = $state(() => {});
 
@@ -14,7 +16,7 @@
 
 <div id="projects" class="info-section bg-accent-700">
 	<div class="flex flex-col gap-8 wrapper">
-		<h2 class="section-header">Projects</h2>
+		<Title title="Projects" />
 		<Slider
 			items={projects}
 			bind:currentItem={currentProject}

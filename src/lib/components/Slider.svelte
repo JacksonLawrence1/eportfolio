@@ -7,7 +7,7 @@
 	type Props = {
 		items: T[];
 
-		ItemComponent: ComponentType<SvelteComponent<{ item: T, index: number, select: (i: number) => void }>>; 
+		ItemComponent: ComponentType<SvelteComponent<{ disabled: boolean, item: T, index: number, select: (i: number) => void }>>; 
 
 		currentItem: T;	
 
@@ -45,6 +45,11 @@
 	};
 
 	function selectInput(i: number) {
+		// BUG: animation doesn't work for 6th item, so disabling it temporarily
+		if (i === 6) {
+			return;
+		}
+
 		// PERF: Make this better
 		if (i === 0) {
 			backwards();
@@ -89,7 +94,7 @@
 			animate:flip={{ duration: animationDuration }}
 			in:fly={{x: i === 0 ? '-100%' : `${100 * animationMultiplier}%`, duration: animationDuration }}
 		>
-			<svelte:component this={ItemComponent} {item} index={i} select={selectInput} />
+			<svelte:component disabled={i >= 6} this={ItemComponent} {item} index={i} select={selectInput} />
 		</div>
 	{/each}
 </div>

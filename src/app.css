@@ -50,10 +50,29 @@ h3 {
 	text-transform: uppercase;
 }
 
-li a:hover {
-	color: #f8f8f8;
-	text-decoration: underline;
-	text-underline-offset: 0.3em;
+.underline-link {
+	position: relative;
+	text-decoration: none;
+}
+
+.underline-link::before {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 0.05rem;
+	bottom: -0.2rem;
+	background-color: theme('colors.gray.200');
+	transform: scaleX(0);
+	transition: transform 0.2s ease;
+}
+
+.underline-link:hover, .underline-group:hover .underline-link {
+	color: theme('colors.gray.200');
+
+	&::before {
+		transform: scaleX(1);
+	}
 }
 
 p {
@@ -68,15 +87,6 @@ p {
 	height: 100%;
 	padding: 6rem 2rem; 
 	overflow: hidden;
-}
-
-.section-header {
-	font-size: 2rem;
-
-	@media (min-width: 768px) {
-		font-size: 3rem;
-		line-height: 1;
-	}
 }
 
 .divider {

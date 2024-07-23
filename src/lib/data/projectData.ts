@@ -8,6 +8,7 @@ export type Project = {
 	id: string;
 	name: string;
 	year: number;
+	month: number;
 	tags: string[];
 	overview: string;
 	imageUrl: string;
@@ -19,10 +20,17 @@ export type Project = {
 export const projects: Project[] = projectsJSON.map((project) => {
 	return { 
 		...project, 
+		month: +project.date.substring(0, 2),
+		year: +project.date.slice(-4),
 		description: project.description.split('\n'),
 		buttons: project.buttons.map(button => addButtonIcon(button)) as Buttons,
 	};
-}).sort((a, b) => b.year - a.year);
+}).sort((a, b) => {
+	if (a.year === b.year) {
+		return b.month - a.month;
+	}
+	return b.year - a.year;
+});
 
 projects.unshift(projects.pop()!); // Move the latest project to the front
 

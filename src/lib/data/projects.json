@@ -2,7 +2,7 @@
 	{
 		"id": "morbent-manor",
 		"name": "Morbent Manor",
-		"year": 2023,
+		"date": "06-2023",
 		"tags": ["C#", "Unity"],
 		"overview": "Ambitious roguelike built in Unity",
 		"imageUrl": "morbent-manor.png",
@@ -15,7 +15,7 @@
 	{
 		"id": "kitchen-feud",
 		"name": "Kitchen Feud",
-		"year": 2022,
+		"date": "06-2022",
 		"tags": ["C#", "Unity"],
 		"overview": "Online team-based cooking game built in Unity",
 		"imageUrl": "kf.jpg",
@@ -28,7 +28,7 @@
 	{
 		"id": "warcraft-portfolio",
 		"name": "Warcraft Portfolio",
-		"year": 2023,
+		"date": "08-2023",
 		"tags": ["Svelte", "SvelteKit", "JavaScript", "TailwindCSS"],
 		"overview": "Portfolio creation tool for World of Warcraft characters",
 		"imageUrl": "warcraft-portfolio.png",
@@ -37,26 +37,24 @@
 			{ "text": "Website", "link": "https://warcraft-portfolio.vercel.app" },
 			{ "text": "GitHub", "link": "https://github.com/JacksonLawrence1/warcraft-portfolio" }
 		]
-	}, 
+	},
 	{
 		"id": "rendering-engine",
 		"name": "C++ Rendering Engine",
-		"year": 2021,
+		"date": "11-2021",
 		"tags": ["C++", "SDL2", "GLM"],
 		"overview": "Rendering engine built in C++ with SDL2 and GLM",
 		"imageUrl": "i18.bmp",
 		"description": "A rendering engine created from scratch using C++, with SDL2 for drawing to screen and GLM to assist with vector and matrix operations. \n The engine features some basic implementations of rendering techniques used by modern renderers including rasterization, ray tracing, phong shading and more.",
-		"buttons": [
-			{ "text": "GitHub", "link": "https://github.com/JacksonLawrence1/CG2021" }
-		]
-	}, 
+		"buttons": [{ "text": "GitHub", "link": "https://github.com/JacksonLawrence1/CG2021" }]
+	},
 	{
 		"id": "sensitivty-converter",
 		"name": "Sensitivity Converter",
-		"year": 2023,
+		"date": "07-2023",
 		"tags": ["React", "JavaScript"],
 		"overview": "Tool to convert mouse sensitivity between games",
-		"imageUrl": "sensitivity-converter.png",	
+		"imageUrl": "sensitivity-converter.png",
 		"description": "A tool to help users to convert their mouse sensitivity between different games. \n I've often found that the converters available have too many bells and whistles, making it confusing or frustrating to use when you just want to convert your mouse sensitivity. This tool focuses on offering an extremely simple interface built on React, to do the job as quickly and easily as possible.",
 		"buttons": [
 			{ "text": "Website", "link": "https://jacksonlawrence1.github.io/sensitivity-converter/" },
@@ -66,22 +64,20 @@
 	{
 		"id": "letterboxd-rec",
 		"name": "Letterboxd Rec",
-		"year": 2024,
 		"tags": ["Go", "htmx"],
+		"date": "06-2024",
 		"overview": "Accurate Movie recommendations, built using Go",
-		"imageUrl": "placeholder.png",
+		"imageUrl": "letterboxd-rec.png",
 		"description": "Letterboxd Rec is a tool to help provide accurate movie recommendations based on Letterboxd favourites. \n When provided a single movie, the tool uses a web scraper to concurrently gather data from users who hold the movie highly, i.e. in their 'top 4' favourites. \n Built using a Go HTTP server, with htmx to perform AJAX requests, I wanted to explore the performance using a non-JavaScript framework for web development.",
-		"buttons": [
-			{ "text": "GitHub", "link": "https://github.com/JacksonLawrence1/letterboxd-rec" }
-		]
+		"buttons": [{ "text": "GitHub", "link": "https://github.com/JacksonLawrence1/letterboxd-rec" }]
 	},
 	{
 		"id": "blender-farm",
 		"name": "AWS Rendering Farm",
-		"year": 2022,
+		"date": "11-2022",
 		"tags": ["Python", "AWS"],
 		"overview": "Rendering farm for Blender built with AWS",
-		"imageUrl": "placeholder.png",
+		"imageUrl": "blender-farm.png",
 		"description": "A tool to help speed up the process of rendering Blender projects using AWS instances. \n Using EC2 instances as workers, the tool splits work so blender files can be rendered distributively. Includes options to render portions of files, and even includes a 'chaos testing' mode to simulate how the tool perseveres through heavy failure/load.",
 		"buttons": [
 			{ "text": "GitHub", "link": "https://github.com/JacksonLawrence1/aws-blender-farm" }
@@ -90,11 +86,11 @@
 	{
 		"id": "graph-calculator",
 		"name": "Graph Calculator",
-		"year": 2019,
+		"date": "07-2019",
 		"tags": ["Python", "Pygame"],
 		"overview": "Desmos like graphing calculator",
 		"imageUrl": "graph-calculator.png",
-		"description": "A primitive graphing calculater built to help students visualise and understand the nature of mathematical functions. \n Inspired by Desmos a web-based graphing visualiser, I created this graphing calculator as part of my A-Levels. the tool allows users to input and quickly visualise a set of mathematical functions including polynomials, trigonometry and circles. \n I created the project with Python, along with Pygame to render the UI.",
+		"description": "A primitive graphing calculater built to help students visualise and understand the nature of mathematical functions. \n Inspired by Desmos, a web-based graphing visualiser, I created this as part of my Computer Science A-Levels. the tool allows users to input and quickly visualise a set of mathematical functions including polynomials, trigonometry and circles. \n I created the project with Python, along with Pygame to render the UI.",
 		"buttons": [
 			{ "text": "GitHub", "link": "https://github.com/JacksonLawrence1/GraphCalculatorProject" }
 		]
@@ -102,11 +98,11 @@
 	{
 		"id": "ale-trail",
 		"name": "Ale Trail",
-		"year": 2021,
+		"date": "06-2021",
 		"tags": ["Android", "Kotlin"],
 		"overview": "Pub crawl tracking app for Android devices",
 		"imageUrl": "pilgrim.jpg",
-		"description": "Ale Trail lets users track their progress during pub crawls and, once completed, win prizes. \n The app was created for a client as part of a group project alongside 4 other students during my 2nd year of University. Users scan a QR code to verify they have visited and can follow along using a map to track the locations of pubs on the trail. It also included an admin dashboard for user analytics. \n The app was built using Kotlin and Android Studio, with a MySQL databse for the backend. As the app was created for a client, the source code is not available, but if you would like to know more about the project, please feel free to contact me.",
+		"description": "Ale Trail lets users track their progress during pub crawls and, once completed, win prizes. \n The app was created for a client as part of a group project alongside 4 other students during my 2nd date of University. Users scan a QR code to verify they have visited and can follow along using a map to track the locations of pubs on the trail. It also included an admin dashboard for user analytics. \n The app was built using Kotlin and Android Studio, with a MySQL databse for the backend. As the app was created for a client, the source code is not available, but if you would like to know more about the project, please feel free to contact me.",
 		"buttons": [
 			{ "text": "Video", "link": "https://www.youtube.com/watch?v=1zHG63kpoGY" },
 			{ "text": "Contact", "link": "#contact" }
@@ -115,14 +111,26 @@
 	{
 		"id": "director-spectrum",
 		"name": "Director Spectrum",
-		"year": 2024,
+		"date": "05-2024",
 		"tags": ["Svelte", "SvelteKit", "TypeScript"],
 		"overview": "Showcase of different film director styles",
-		"imageUrl": "placeholder.png",
+		"imageUrl": "director-spectrum.png",
 		"description": "A website to showcases how film directors can fall into a spectrum of directing styles. \n Made as an effort to focus on front-end creativity, this small project allows users to view information about similar film directors and explore some of their filmography. \n Created using Svelte (with SvelteKit) and TypeScript.",
 		"buttons": [
 			{ "text": "Website", "link": "https://thedirectorspectrum.vercel.app" },
 			{ "text": "GitHub", "link": "https://github.com/JacksonLawrence1/director-spectrum" }
+		]
+	},
+	{
+		"id": "rep-buddy",
+		"name": "Rep Buddy",
+		"date": "08-2024",
+		"tags": ["React", "React Native", "TypeScript"],
+		"overview": "Native Workout history and management app",
+		"imageUrl": "rep-buddy.png",
+		"description": "A native workout management app allowing users to track their workout history, creating templates of custom workouts and exercises. This includes the a detailed workout history with exercise weight used, and the number of reps completed. \n Built using React Native and TypeScript, I am aiming to release it soon for Android on the Google Play Store.",
+		"buttons": [
+			{ "text": "GitHub", "link": "https://github.com/JacksonLawrence1/rep-buddy" }
 		]
 	}
 ]

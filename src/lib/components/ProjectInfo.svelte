@@ -30,7 +30,7 @@
 		</div>
 		<div class="flex flex-wrap gap-2 px-4 text-sm md:px-0 md:text-base project-tags h-min">
 			{#each tags.sort() as tag}
-				<span class="px-2 pb-1 bg-green-600 rounded-lg">{tag}</span>
+				<span class="bg-green-700 text-sm px-2 rounded-lg">{tag}</span>
 			{/each}
 		</div>
 		<div

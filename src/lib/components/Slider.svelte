@@ -90,7 +90,7 @@
 <div class="relative slider">
 	{#each itemsArr.slice(0, itemsToShow) as item, i (item.id)}
 		<div
-			class="overflow-hidden bg-black rounded-lg project w-full h-full"
+			class="overflow-hidden bg-black rounded-lg project w-full h-max"
 			animate:flip={{ duration: animationDuration }}
 			in:fly={{x: i === 0 ? '-100%' : `${100 * animationMultiplier}%`, duration: animationDuration }}
 		>
@@ -123,8 +123,12 @@
 		grid-auto-flow: column;
 		width: calc(100% + 2 * var(--frac));
 		margin-left: calc(-1 * var(--frac));
-		gap: 1rem;
+		gap: 0.5rem;
 		transition: all 1s;
+
+		@media (min-width: 1024px) {
+			gap: 1rem;
+		}
 	}
 
 	.project:last-child {

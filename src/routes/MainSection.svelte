@@ -30,7 +30,7 @@
 					to say hi!
 				</p>
 
-				<p>I also use Neovim btw.</p>
+				<p>I also use Neovim, btw.</p>
 			</div>
 		</div>
 	</div>

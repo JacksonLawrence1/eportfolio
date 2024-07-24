@@ -1,9 +1,37 @@
-<script>
+<script lang="ts">
 	import Title from '$lib/components/Title.svelte';
 import GitHubIcon from '$lib/icons/GitHubIcon.svelte';
 	import MailIcon from '$lib/icons/MailIcon.svelte';
 
 	import '../app.css';
+
+	let animated: boolean = false;
+
+	function animateStars() {
+		if (animated) {
+			return;
+		}
+
+		animated = true;
+
+		// get all spans with class star
+		const stars = document.querySelectorAll('span.star');
+		window.scrollTo(0, 0);
+
+		for (const star of stars) {
+			// cast as span element
+			const starElement = star as HTMLSpanElement;
+
+			// apply animation
+			const duration = Math.random() * 100 + 50;
+			const delay = Math.random() * 10;
+
+			starElement.style.animationDuration = `${duration}s`;
+			starElement.style.animationDelay = `${delay}s`;
+
+			star.classList.add('star-animation');
+		}
+	}
 </script>
 
 <nav class="absolute top-0 z-20 mx-auto w-screen list-none">
@@ -60,7 +88,13 @@ import GitHubIcon from '$lib/icons/GitHubIcon.svelte';
 	<div
 		class="flex flex-wrap gap-8 justify-between items-end pt-8 w-full font-bold uppercase wrapper"
 	>
-		<small class="text-gray-400 text-[0.6rem]">Here's to the fools who dream.</small>
+		<button
+			class="flex items-center gap-2"
+			on:click={animateStars}
+			disabled={animated}
+			>
+			<small class="text-gray-400 text-[0.6rem]">Here's to the fools who dream.</small>
+		</button>
 		<ul class="flex flex-wrap gap-8 justify-between basis-full text-sm sm:basis-auto sm:justify-end md:text-base">
 			<li>
 				<a class="underline-link" href="https://github.com/JacksonLawrence1/eportfolio" target="_blank">Source Code</a>

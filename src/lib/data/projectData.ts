@@ -17,7 +17,7 @@ export type Project = {
 };
 
 
-export const projects: Project[] = projectsJSON.map((project) => {
+export default projectsJSON.map((project) => {
 	return { 
 		...project, 
 		month: +project.date.substring(0, 2),
@@ -31,7 +31,5 @@ export const projects: Project[] = projectsJSON.map((project) => {
 	}
 	return b.year - a.year;
 });
-
-projects.unshift(projects.pop()!); // Move the latest project to the front
 
 

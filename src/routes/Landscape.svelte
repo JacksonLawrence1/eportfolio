@@ -13,8 +13,9 @@
 			const star = document.createElement('span');
 			star.classList.add('star');
 			star.style.left = `${Math.random() * 100}%`;
-			star.style.top = `${Math.random() * 85}%`;
+			star.style.top = `${Math.random() * 100}%`;
 			star.style.height = star.style.width = `${Math.random() * 3}px`;
+
 			starContainer.appendChild(star);
 		}
 	}

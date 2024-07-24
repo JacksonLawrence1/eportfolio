@@ -24,6 +24,26 @@
 	z-index: 5;
 }
 
+.star-animation {
+	animation: starAnimation 10s linear infinite;
+}
+
+@keyframes starAnimation {
+	0% {
+		transform: translateY(0);
+		opacity: 0.6;
+	}
+	50% {
+		transform: translateY(-100vh);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 0.6;
+	}
+}
+
+
 .limelight {
 	font-family: 'Limelight', sans-serif;
 	font-weight: 400;

@@ -1,33 +1,32 @@
 <script lang="ts">
-	import { type Project as ProjectType, projects } from '$lib/data/projectData';
-	import Slider from '$lib/components/Slider.svelte';
-
-	import ProjectSliderComponent from '$lib/components/ProjectSliderComponent.svelte';
+	import Carousel from '$lib/components/Carousel.svelte';
 	import ProjectInfo from '$lib/components/ProjectInfo.svelte';
+	import ProjectSliderComponent from '$lib/components/ProjectSliderComponent.svelte';
 	import Title from '$lib/components/Title.svelte';
 
-	// declare here so we can assign them to buttons outside slider component
-	let backward: () => void = $state(() => {});
-	let forward: () => void = $state(() => {});
+	import projects from '$lib/data/projectData';
+	import { type Project } from '$lib/data/projectData';
 
-	// frozen so we can't mutate it only replace it
-	let currentProject: ProjectType = $state.frozen(projects[1]);
+	let current: number = 0;
+
+	// wrap around the current index, with no negative values
+	function updateCurrent(direction: number) {
+		return (current + direction + projects.length) % projects.length;
+	}
 </script>
 
 <div id="projects" class="info-section bg-accent-700">
 	<div class="flex flex-col gap-8 wrapper">
 		<Title title="Projects" />
-		<Slider
-			items={projects}
-			bind:currentItem={currentProject}
-			ItemComponent={ProjectSliderComponent}
-			bind:backwards={backward}
-			bind:forwards={forward}
-		/>
+		<Carousel bind:current items={projects}>
+			{#snippet children(item: Project, i: number)}
+				<ProjectSliderComponent selected={current === i} {item} />
+			{/snippet}
+		</Carousel>
+		<div class="flex justify-between">
+			<button class="btn" onclick={() => current = updateCurrent(-1)}>Prev</button>
+			<button class="btn" onclick={() => current = updateCurrent(1)}>Next</button>
+		</div>
+		<ProjectInfo project={projects[current]} />
 	</div>
-	<div class="flex justify-between pt-8 text-xl wrapper">
-		<button onclick={backward} class="btn">Previous</button>
-		<button onclick={forward} class="btn">Next</button>
-	</div>
-	<ProjectInfo project={currentProject} />
 </div>

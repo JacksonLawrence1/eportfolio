@@ -16,7 +16,7 @@
 </script>
 
 <div id="projects" class="info-section bg-accent-700">
-	<div class="flex flex-col gap-8 wrapper">
+	<div class="flex flex-col gap-4 wrapper">
 		<Title title="Projects" />
 		<Carousel bind:current items={projects}>
 			{#snippet children(item: Project, i: number)}

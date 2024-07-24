@@ -16,7 +16,7 @@
 			<img
 				src={`images/${imageUrl}`}
 				alt={name}
-				class="object-cover z-10 w-full h-full rounded-lg aspect-[2/3] sm:aspect-[16/9]"
+				class="object-cover z-10 w-full h-full rounded-lg aspect-square sm:aspect-[16/9]"
 			/>
 			<div
 				class="absolute py-2 h-full w-full top-0 bg-gradient-to-t from-accent-700 from-20% to-transparent to-60% md:bg-gradient-to-r md:from-accent-700 md:to-transparent"

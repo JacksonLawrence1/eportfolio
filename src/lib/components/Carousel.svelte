@@ -1,5 +1,6 @@
 <script lang="ts" generics="T extends { id: string }">
 	import { type Snippet } from 'svelte';
+	import { spring } from 'svelte/motion';
 
 	type Props = {
 		items: T[];
@@ -11,7 +12,7 @@
 
 	let width: number = $state(0);
 
-	// depending on our width, we want to show a certain number of items
+	// dynamically adjust visible items in the carousel based on screen width
 	let itemsVisible: number = $derived.by(() => {
 		if (width < 640) {
 			return 2;
@@ -22,42 +23,63 @@
 		}
 	});
 
+	// dynamically adjust height based on screen width, using aspect ratios
 	let height: number = $derived.by(() => {
-		if (width < 1024) { // 2:3 aspect ratio for lg screens and below
-			return (width / itemsVisible / 2) * 3
+		if (width < 1024) {
+			return (width / itemsVisible / 2) * 3; // 2:3
 		}
 
-		// 4:3 aspect ratio for xl screens and above
-		return (width / itemsVisible / 4) * 3;
+		return (width / itemsVisible / 4) * 3; // 4:3
 	});
 
-	function difference(index: number) {
-		// distance between the current index and the index we want to show, with wrap 
-		let diff: number = (index - current + items.length) % items.length;
 
-		// if the difference is more than the items we want to show, then difference becomes negative
-		return diff > itemsVisible + 1 ? diff - items.length : diff;
+	// wraps an index around the length of the items array
+	const wrap = (n: number) => {
+		const offset: number = (n % items.length + items.length) % items.length
+		return offset > itemsVisible + 1 ? offset - items.length : offset;
+	};
+
+
+	// animate carousel movement
+	let tween = spring(0, { stiffness: 0.1, damping: 0.6 });
+
+	// update the tween whenever current changes
+	$effect(() => {
+		tween.update((old) => Math.round(old) + wrap(current - old), { soft: 1 });
+	});
+
+
+	function formatStyle(indexOffset: number) {
+		const itemWidth: number = 100 / itemsVisible;
+		const itemOffset: number = 100 * wrap(indexOffset);
+
+		return `transform: translateX(${itemOffset}%);width: ${itemWidth}%;`;
 	}
 
-	function formatStyle(index: number) {
-		const widthPercentage: number = 100 / itemsVisible; // percentage width of each item
-		const offset: number = 100 * difference(index); // how much to translate each item forward
+	function visible(indexOffset: number) {
+		let diff: number = wrap(indexOffset);
 
-		return `transform: translateX(${offset}%);width: ${widthPercentage}%;`;
+		// items at edge disappear instantly on exiting DOM, so show an extra item on each side
+		return diff >= -2 && diff <= itemsVisible + 1;
 	}
 
-	function visible(index: number) {
-		const diff: number = difference(index);
-
-		// -1 to account for item behind being partially visible
-		return diff >= -1 && diff <= itemsVisible;
+	// disables tabbing on the edge buttons that should be hidden
+	function edge(indexOffset: number) {
+		let diff: number = wrap(indexOffset);
+		return diff === -2 || diff === itemsVisible + 1;
 	}
 </script>
 
-<div class={`carousel relative`} style={`height: ${height}px`} bind:clientWidth={width}>
+<div class={`noscrollbar relative`} style={`height: ${height}px`} bind:clientWidth={width}>
 	{#each items as item, i}
-		{#if visible(i)}
-			<button onclick={() => current = i} class="absolute h-full w-full p-1" style={formatStyle(i)}>
+		{@const itemOffset: number = i - $tween}
+		{#if visible(itemOffset)}
+			<button
+				onclick={() => (current = i)}
+				class="absolute p-1 h-full"
+				style={formatStyle(itemOffset)}
+				disabled={edge(itemOffset)}
+			>
 				{@render children(item, i)}
 			</button>
 		{/if}
@@ -65,7 +87,14 @@
 </div>
 
 <style>
-	.carousel {
+	/* chrome, safari, opera */
+	.noscrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* ie, edge, firefox */
+	.noscrollbar {
+		-ms-overflow-style: none;
 		scrollbar-width: none;
 	}
 </style>

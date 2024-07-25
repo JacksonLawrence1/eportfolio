@@ -49,36 +49,30 @@
 	});
 
 
-	function formatStyle(indexOffset: number) {
+	function formatStyle(offset: number) {
 		const itemWidth: number = 100 / itemsVisible;
-		const itemOffset: number = 100 * wrap(indexOffset);
+		const itemOffset: number = 100 * offset;
 
 		return `transform: translateX(${itemOffset}%);width: ${itemWidth}%;`;
 	}
 
-	function visible(indexOffset: number) {
-		let diff: number = wrap(indexOffset);
+	// returns true for items in list that should be visible on the page
+	const isVisible = (diff: number) => diff >= -2 && diff <= itemsVisible + 1;
 
-		// items at edge disappear instantly on exiting DOM, so show an extra item on each side
-		return diff >= -2 && diff <= itemsVisible + 1;
-	}
+	// returns true only for items at the edge of the page, which shouldn't be visible
+	const onEdge = (diff: number) => diff === -2 || diff === itemsVisible + 1;
 
-	// disables tabbing on the edge buttons that should be hidden
-	function edge(indexOffset: number) {
-		let diff: number = wrap(indexOffset);
-		return diff === -2 || diff === itemsVisible + 1;
-	}
 </script>
 
 <div class={`noscrollbar relative`} style={`height: ${height}px`} bind:clientWidth={width}>
 	{#each items as item, i}
-		{@const itemOffset: number = i - $tween}
-		{#if visible(itemOffset)}
+		{@const itemOffset: number = wrap(i - $tween)}
+		{#if isVisible(itemOffset)}
 			<button
 				onclick={() => (current = i)}
 				class="absolute p-1 h-full"
 				style={formatStyle(itemOffset)}
-				disabled={edge(itemOffset)}
+				disabled={onEdge(itemOffset)}
 			>
 				{@render children(item, i)}
 			</button>

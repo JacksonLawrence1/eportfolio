@@ -3,7 +3,7 @@
 	import MainSection from './MainSection.svelte';
 </script>
 
-<div class="w-screen h-screen background-gradient">
+<div class="w-screen h-[110vh] background-gradient">
 	<div class="absolute z-10 w-full">
 		<div
 			class="flex-col gap-2 items-start p-10 mx-auto mt-8 mb-auto w-full wrapper titles"

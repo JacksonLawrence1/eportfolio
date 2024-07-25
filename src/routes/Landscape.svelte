@@ -54,8 +54,8 @@
 	></div>
 </div>
 
-<div class="overflow-hidden relative bottom-0 w-full floor h-[20vh] bg-base-200">
-	<div class="absolute bottom-[2vh] left-1/2 -translate-x-1/2">
+<div class="overflow-hidden relative bottom-0 w-full floor h-[30vh] bg-base-200">
+	<div class="absolute bottom-[12vh] left-1/2 -translate-x-1/2">
 		<ScrollArrow destination="#about" />
 	</div>
 </div>

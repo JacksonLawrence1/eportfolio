@@ -1,9 +1,10 @@
 <script>
+	import Divider from '$lib/components/Divider.svelte';
 	import Title from '$lib/components/Title.svelte';
 	import Projects from './Projects.svelte';
 </script>
 
-<div class="divider"></div>
+<Divider colour="text-base-400" />
 
 <div id="about" class="info-section bg-base-400">
 	<div class="flex flex-col gap-4 items-start wrapper">
@@ -36,8 +37,8 @@
 	</div>
 </div>
 
-<div class="divider"></div>
+<Divider colour="text-accent-700" />
 
 <Projects />
 
-<div class="divider"></div>
+<Divider colour="text-base-900" />

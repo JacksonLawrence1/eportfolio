@@ -16,7 +16,8 @@
 </script>
 
 <div id="projects" class="info-section bg-accent-700">
-	<div class="flex flex-col gap-4 wrapper">
+	<div class="flex flex-col gap-4 wrapper relative">
+		<div class="overlay"></div>
 		<Title title="Projects" />
 		<Carousel bind:current items={projects}>
 			{#snippet children(item: Project, i: number)}
@@ -30,3 +31,34 @@
 		<ProjectInfo project={projects[current]} />
 	</div>
 </div>
+
+<style>
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+	}
+
+	.overlay::before, .overlay::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 100%;
+		z-index: 1;
+	}
+
+	.overlay::before {
+		left: -100%;
+		background: linear-gradient(to right, theme('colors.accent.700') 90%, rgba(255, 255, 255, 0));
+	}
+
+	.overlay::after {
+		right: -100%;
+		background: linear-gradient(to left, theme('colors.accent.700') 90%, rgba(255, 255, 255, 0));
+	}
+
+</style>

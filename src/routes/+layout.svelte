@@ -23,8 +23,8 @@ import GitHubIcon from '$lib/icons/GitHubIcon.svelte';
 			const starElement = star as HTMLSpanElement;
 
 			// apply animation
-			const duration = Math.random() * 100 + 50;
-			const delay = Math.random() * 10;
+			const duration = Math.random() * 100 + 20;
+			const delay = Math.random() * 20;
 
 			starElement.style.animationDuration = `${duration}s`;
 			starElement.style.animationDelay = `${delay}s`;

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Title from '$lib/components/Title.svelte';
 import GitHubIcon from '$lib/icons/GitHubIcon.svelte';
+	import LinkedInIcon from '$lib/icons/LinkedInIcon.svelte';
 	import MailIcon from '$lib/icons/MailIcon.svelte';
 
 	import '../app.css';
@@ -68,7 +69,12 @@ import GitHubIcon from '$lib/icons/GitHubIcon.svelte';
 					</a>
 				</li>
 				<li>
-					<!-- TODO: Add Link -->
+					<a class="group underline-group" target="_blank" href="https://www.linkedin.com/in/jackson-lawrence-7650ab321/">
+						<LinkedInIcon classList="group-hover:text-gray-200" />
+						<p class="underline-link">Jackson Lawrence</p>
+					</a>
+				</li>
+				<li>
 					<a class="group underline-group" target="_blank" href="https://github.com/JacksonLawrence1">
 						<GitHubIcon classList="group-hover:text-gray-200" />
 						<p class="underline-link">JacksonLawrence1</p>
